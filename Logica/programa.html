@@ -1,0 +1,76 @@
+<meta charset="utf-8">
+
+<!--Dentro de HTML no importa si se usan 
+	los tags en minusculas o mayusculas, 
+	pero como buena practica se usan 
+	miniusculas, caso contrario en JS-->
+
+<h1> Programa </h1>
+<H1> Programa </H1>
+
+
+<script type="text/javascript">
+
+	/* Variables */
+	var anho = 2023;
+
+	/* Primer test */
+	document.write("La edad del usuario es: ");
+	document.write("<br>");
+	document.write("25");
+	document.write("<br>");
+	document.write("<br>");
+
+	/* Segundo test */
+	document.write("El promedio de edad de Juan, Pedro y Carlos es: ");
+	document.write((20+25+15)/3);
+	document.write("<br>");
+	document.write("<br>");
+
+	/* Tercer test in one line */
+	document.write("La suma de las edades de Juan, Pedro y Carlos es: " + (20+25+15));
+	document.write("<br>");
+	document.write("<br>");
+	document.write("Juan nacio en el año: " + (2023-20));
+	document.write("<br>");
+	document.write("Pedro nacio en el año: " + (2023-25));
+	document.write("<br>");
+	document.write("Carlos nacio en el año: " + (2023-15));
+
+	/* Cuarto test */
+	document.write("<br>");
+	document.write("<br>");
+	document.write("Juan tiene: " + (anho-2003));
+	document.write("<br>");
+	document.write("Pedro tiene: " + (anho-1998));
+	document.write("<br>");
+	document.write("Carlos tiene: " + (anho-2008));
+
+	/* Quinto test */
+
+	// promedio = (10+25+15)/3
+	var edadJimena = 10;
+	var edadAndrea = 25;
+	var edadSara = 15;
+
+	var nombre1 = "Jimena";
+	var nombre2 = "Andrea";
+	var nombre3 = "Sara";
+
+	promedio = (edadJimena + edadAndrea + edadAndrea)/3;
+
+
+	document.write("<br>");
+	document.write("<br>");
+	document.write("Jimena tiene: " + (anho-2010));
+	document.write("<br>");
+	document.write("Andrea tiene: " + (anho-1995));
+	document.write("<br>");
+	document.write("Sara tiene: " + (anho-2005));
+	document.write("<br>");
+	document.write("<br>");
+	document.write("El promedio de las 3 mujeres es: " + Math.round(promedio));
+	document.write("<br>");
+	document.write("El promedio de las edades de: " + nombre1 + ", " + nombre2 + " y " + nombre3 + " es: " + Math.round(promedio));
+
+</script>

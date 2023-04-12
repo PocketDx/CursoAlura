@@ -1,0 +1,52 @@
+<meta charset="utf-8">
+
+<h1> Programa - Juego de Adivinar </h1>
+
+<script>
+
+	// Funcion vacia
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+
+	}
+
+	// Funcion con parametros
+	function imprimir(frase) {
+		
+		document.write(frase);
+		saltarLinea();
+	}
+
+	// Funcion para sortear un numero entre 0 y n
+	var numero = parseInt(prompt("Ingrese el numero maximo del sorteo"));
+
+	function sorteo(numero) {
+		n = Math.round(Math.random()*numero);
+		return n;
+	}
+
+	var numeroPensado = sorteo(numero);
+	var numeroLanzado = parseInt(prompt("Ingrese numero entero entre 0 - " + numero));
+
+	function jugar(numeroPensado,numeroLanzado) {
+		if (numeroLanzado == numeroPensado) {
+			imprimir("Usted Acertó");
+		}
+		else {
+			imprimir("Fallo, el numero era: " + numeroPensado);
+			if (numeroLanzado > numeroPensado) {
+				imprimir("El numero pensado era menor");
+			}
+			else {
+				imprimir("El numero pensado era mayor");
+			}
+		}
+	}
+
+	jugar(numeroPensado, numeroLanzado);
+
+
+</script>

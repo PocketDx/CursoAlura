@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+
+<h1> Programa - Juego de Adivinar </h1>
+
+<script>
+
+	// Funcion vacia
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+
+	}
+
+	// Funcion con parametros
+	function imprimir(frase) {
+		
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var edad = parseInt(prompt("¿Edad?"));
+	var tieneLicencia = prompt("¿Licencia?, Responde S o N");
+
+	function manejar(edad,licencia) {
+		if (edad >= 18 && licencia == "s") {
+			imprimir("Puedes conducir");
+		}
+		
+		else {
+			imprimir("No puede conducir");
+		}
+	}
+
+	manejar(edad, tieneLicencia);
+
+
+</script>

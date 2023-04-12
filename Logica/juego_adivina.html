@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+
+<h1> Programa - Juego de Adivinar </h1>
+
+<script>
+
+	// Funcion vacia
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+
+	}
+
+	// Funcion con parametros
+	function imprimir(frase) {
+		
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var numeroPensado = Math.round(Math.random()*10);
+	var numeroLanzado = parseInt(prompt("Ingrese numero entero entre 0 - 10"));
+
+	function jugar(numeroPensado,numeroLanzado) {
+		if (numeroLanzado == numeroPensado) {
+			imprimir("Usted Acertó");
+		}
+		else {
+			imprimir("Fallo, el numero era: " + numeroPensado);
+		}
+	}
+
+	jugar(numeroPensado, numeroLanzado);
+
+
+</script>

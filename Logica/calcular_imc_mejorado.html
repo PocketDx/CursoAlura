@@ -1,0 +1,69 @@
+<meta charset="utf-8">
+
+<h1> Programa Calculo IMC </h1>
+
+<script>
+
+	// Funcion vacia
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+
+	}
+
+	// Funcion con parametros
+	function imprimir(frase) {
+		
+		document.write(frase);
+		saltarLinea();
+	}
+
+	// Funcion para calcular IMC, con parametros y subfuncion
+	function calcularImc(peso,altura,nombre) {
+		imc = peso / (altura * altura);
+		imprimir("El imc de " + nombre +" es: " + imc);
+	}
+
+	peso = 58;
+	altura = 1.68;
+	calcularImc(peso,altura,"Juan");
+	calcularImc(70,1.68,"Felipe");
+
+	// Funcion de IMC mejorada
+	function calcularIMC2(peso,altura) {
+		return (peso / (altura * altura));
+	}
+
+	imprimir("El promedio de IMC de Cristian y Felipe es: " + (calcularIMC2(71,1.72) + calcularIMC2(75,1.73) /2));
+
+	// Ejercicio de interaccion con el usuario
+	nombre = prompt("Informe su nombre");
+	pesoInformado = prompt("Informe su peso");
+	alturaInformada = prompt("Informe su altura");
+
+	imcCalculado = calcularIMC2(pesoInformado,alturaInformada);
+
+	imprimir("El imc de " + nombre + ", es: " + imcCalculado);
+
+	// Ejercicio con condicionales
+
+	function establecerIMC(imc) {
+		if (imc < 18.5) {
+			imprimir("El IMC es insuficiente");
+		}
+		if (imc >= 18.5 && imc < 25) {
+			imprimir("El IMC es normal");
+		}
+		if (imc >= 25 && imc < 30) {
+			imprimir("El IMC es sobrepeso");
+		}
+		if (imc >= 30) {
+			imprimir("El IMC es obesidad");
+		}
+	}
+
+	establecerIMC(imcCalculado);
+
+</script>
