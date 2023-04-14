@@ -1,0 +1,71 @@
+<meta charset="utf-8">
+
+<h1> Programa - Juego de Adivinar mejorado con interrupcion "BREAK"</h1>
+
+<script>
+
+	// Funcion vacia
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+
+	}
+
+	// Funcion con parametros
+	function imprimir(frase) {
+		
+		document.write(frase);
+		saltarLinea();
+	}
+
+	// Funcion para sortear un numero entre 0 y n
+	var numero = parseInt(prompt("Ingrese el numero maximo del sorteo"));
+	var intentos = parseInt(prompt("Ingrese el numero maximo de intentos para adivinar"));
+
+	function sorteo(numero) {
+		n = Math.round(Math.random()*numero);
+		return n;
+	}
+
+	var numeroPensado = sorteo(numero);
+	var numeroLanzado = 0;
+
+	function jugar(numeroPensado,numeroLanzado) {
+		
+		if (numeroLanzado == numeroPensado) {
+			alert("Usted Acertó");
+			return true;
+		}
+		
+		if (numeroLanzado > numeroPensado) {
+			alert("Fallo, El numero pensado era menor");
+			return false;
+		}
+		if (numeroLanzado < numeroPensado) {
+			alert("Fallo, El numero pensado era mayor");
+			return false;
+		}
+
+	}
+
+	var contador = 1;
+	while(contador <= intentos){
+		numeroLanzado = parseInt(prompt("Ingrese numero entero entre 0 - " + numero));
+		if(jugar(numeroPensado, numeroLanzado) == true){
+			break;
+		}
+		else {
+			if (contador == intentos){
+				imprimir("Usted fallo, el numero pensado era: " + numeroPensado);
+				alert("Se terminaron los intentos");
+			}
+			contador++;
+		}
+	}
+	imprimir("FIN");
+	
+
+
+</script>

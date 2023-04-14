@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+
+<h1> Programa - Calcular Media Edades</h1>
+
+<script>
+
+	// Funcion vacia
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+
+	}
+
+	// Funcion con parametros
+	function imprimir(frase) {
+		
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var edadPadre = 0;
+	var edadMadre = 0;
+	var edadHijo = 0;
+	var edadHija = 0;
+
+	// Funcion para ingresar las edades de la familia
+	function ingresarFamilia(){
+		edadPadre = parseInt(prompt("Ingrese edad Padre"));
+		edadMadre = parseInt(prompt("Ingrese edad Madre"));
+		edadHijo = parseInt(prompt("Ingrese edad Hijo"));
+		edadHija = parseInt(prompt("Ingrese edad Hija"));
+	}
+
+	// Funcion que recibe las edades y halla la media
+	function calcularMediaEdades(padre,madre,hijo,hija){
+
+		media = (padre + madre + hijo + hija ) / 4;
+		imprimir("La media de las edades es: " + media);
+	}
+
+	ingresarFamilia();
+	calcularMediaEdades(edadPadre,edadMadre,edadHijo,edadHija);
+
+
+</script>

@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 
-<h1> Programa - Años del Mundial </h1>
+<h1> Programa - Tablas de Multiplicar </h1>
 
 <script>
 
@@ -20,15 +20,20 @@
 		saltarLinea();
 	}
 
-	var anhoMundial = 1930;
-	var limite = parseInt(prompt("Ingrese el año para calcular"));
+	var multiplicador = 1;
 
 	// Loop Mientras que ...
 	imprimir("WHILE");
-	while(anhoMundial <= limite){
+	while(multiplicador <= 10){
 
-		imprimir("Hubo mundial de fifa en el año: " + anhoMundial);
-		anhoMundial += 4;
+		imprimir(5 * multiplicador);
+		multiplicador ++;
+	}
+
+	// Ciclo for ..
+	imprimir("FOR");
+	for (var multiplicador = 1;multiplicador <= 10;multiplicador ++){
+		imprimir(5 * multiplicador);
 	}
 
 </script>

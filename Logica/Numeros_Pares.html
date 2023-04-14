@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+
+<h1> Programa - Calcular numeros pares a 100</h1>
+
+<script>
+
+	// Funcion vacia
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+
+	}
+
+	// Funcion con parametros
+	function imprimir(frase) {
+		
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var contador = 0;
+
+	while(contador < 100){
+		contador += 2;
+		imprimir(contador);
+	}
+	imprimir("fin");
+
+
+</script>

@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+
+<h1> Programa - Calcular Media Edades Mejorado</h1>
+
+<script>
+
+	// Funcion vacia
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+
+	}
+
+	// Funcion con parametros
+	function imprimir(frase) {
+		
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var edades = 0;
+	var numMiembros = parseInt(prompt("Ingrese cantidad de mimebros de su familia"));
+	var contador = 1;
+
+	while(contador <= numMiembros){
+		edad = parseInt(prompt("Ingrese la edad del familiar"));
+		edades += edad;
+		contador ++;
+	}
+
+	media = edades / numMiembros;
+	imprimir("La media de edad de tu famlia es: " + media);
+
+</script>

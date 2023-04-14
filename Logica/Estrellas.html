@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+
+<h1> Programa - Estrellas </h1>
+
+<script>
+
+	// Funcion vacia
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+
+	}
+
+	// Funcion con parametros
+	function imprimir(frase) {
+		
+		document.write(frase);
+		saltarLinea();
+	}
+
+	for(var lineas = 1; lineas <= 3; lineas++){
+
+		for (var columnas = 1; columnas <= 10; columnas++) {
+			document.write("*");
+		}
+		saltarLinea();
+	}
+	
+	imprimir("FIN");
+	
+</script>
