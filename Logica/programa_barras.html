@@ -13,10 +13,9 @@
 		pincel.fillRect(x,y,base,altura); //funcion relleno
 		pincel.strokeStyle = ""; //propiedad
 		pincel.strokeRect(x,y,base,altura); //funcion borde
-
 	}
 
-	function esccribirTexto(x,y,texto){
+	function escribirTexto(x,y,texto){
 
 		pincel.font = "15px Arial";
 		pincel.fillStyle = "black";
@@ -29,7 +28,13 @@
 
 	function dibujarBarra(x,y,serie,colores,texto) {
 		// body...
-
+		escribirTexto(x,y -10, texto);
+		var sumaAltura = 0;
+		for (var i = 0; i < serie.length; i++) {
+			var altura = serie[i];
+			dibujarRectangulo(x,y + sumaAltura,colores[i],50,altura);
+			sumaAltura += altura;
+		}
 	}
 
 	dibujarBarra(50,50,serie2009,colores,"2009");
